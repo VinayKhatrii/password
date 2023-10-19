@@ -28,3 +28,5 @@ def generate_password(password_length):
     
     return password
 
+def generate_multiple(password_length, password_number):
+    return [generate_password(password_length) for _ in range(password_number)]
