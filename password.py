@@ -6,10 +6,8 @@ smallLetters = string.ascii_lowercase
 numbers = string.digits
 specialChar = "!@#$%^&?><|_-"
 
-#You can change password length anytime
-password_length = int(input("Enter the length of the password: "))
 
-def generate_password():
+def generate_password(password_length):
 
     essential = [
         random.choice(smallLetters),
@@ -30,17 +28,3 @@ def generate_password():
     
     return password
 
-try:
-    numOfPass = int(input("How many passwords?: "))
-    print()
-    
-    with open("password.txt", "a") as f:
-        for _ in range(numOfPass):
-            password = generate_password()
-            print(password)
-            f.write(password + "\n")
-    
-    print(f"\nAbove are your {numOfPass} passwords")
-    
-except ValueError:
-    print("Enter a valid number of passwords.")
