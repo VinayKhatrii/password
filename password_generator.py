@@ -7,7 +7,7 @@ numbers = string.digits
 specialChar = "!@#$%^&?><|_-"
 
 #You can change password length anytime
-password_length = 18 
+password_length = int(input("Enter the length of the password: "))
 
 def generate_password():
 
